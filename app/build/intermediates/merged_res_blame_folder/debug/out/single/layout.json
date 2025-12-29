@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.skaxoduf.spoplus.app-mergeDebugResources-3:/layout/activity_main.xml",
+        "source": "com.skaxoduf.spoplus.app-main-6:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-mergeDebugResources-3:\\layout\\item_transaction.xml",
+        "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\layout\\item_transaction.xml"
+    },
+    {
+        "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-mergeDebugResources-3:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\layout\\activity_main.xml"
+    }
+]

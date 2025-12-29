@@ -1,0 +1,21 @@
+R_DEF: Internal format may change without notice
+local
+id authContainer
+id btnConnect
+id btnDateFrom
+id btnDateTo
+id dateContainer
+id etDatabase
+id etPassword
+id etServer
+id etUser
+id recyclerView
+id tvStatus
+id tvTransactionDetails
+id tvTransactionTitle
+layout activity_main
+layout item_transaction
+string app_name
+style Theme.SpoPlus
+xml backup_rules
+xml data_extraction_rules
