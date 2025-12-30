@@ -159,11 +159,11 @@
             <!-- Search Button -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnConnect"
+                style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:text="Search Transactions"
-                android:textSize="16sp"
-                style="@style/Widget.MaterialComponents.Button"/>
+                android:textSize="16sp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
