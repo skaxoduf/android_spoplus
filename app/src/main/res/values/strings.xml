@@ -1,3 +1,39 @@
 <resources>
-    <string name="app_name">SpoPlus Monitor</string>
+    <string name="app_name">SpoPlus 모니터</string>
+    
+    <!-- Home Activity -->
+    <string name="title_home">SPO PLUS</string>
+    <string name="subtitle_home">거래 관리 시스템</string>
+    <string name="btn_transactions">거래내역 조회</string>
+    <string name="btn_settings">환경설정</string>
+    
+    <!-- Settings Activity -->
+    <string name="title_settings">환경설정</string>
+    <string name="section_db_connection">데이터베이스 연결 설정</string>
+    <string name="label_server">서버 주소 (IP:Port)</string>
+    <string name="label_database">데이터베이스 이름</string>
+    <string name="label_user">사용자 ID</string>
+    <string name="label_password">비밀번호</string>
+    <string name="btn_save">설정 저장</string>
+    <string name="msg_config_saved">설정이 저장되었습니다.</string>
+    
+    <string name="section_display_settings">화면 설정</string>
+    <string name="option_light">라이트 모드</string>
+    <string name="option_dark">다크 모드</string>
+    <string name="option_system">시스템 설정</string>
+    
+    <!-- Main Activity (Transactions) -->
+    <string name="title_transactions">거래내역 조회</string>
+    <string name="label_date_range">조회 기간 선택</string>
+    <string name="btn_search">조회하기</string>
+    <string name="status_ready">조회 준비 완료</string>
+    <string name="status_searching">상태: 데이터 조회 중...</string>
+    <string name="status_failed">상태: 조회 실패</string>
+    <string name="status_found_format">상태: %d건 조회됨</string>
+    
+    <!-- Navigation Menu -->
+    <string name="nav_home">홈으로</string>
+    <string name="nav_transactions">거래내역 조회</string>
+    <string name="nav_settings">환경설정</string>
+    <string name="nav_exit">앱 종료</string>
 </resources>

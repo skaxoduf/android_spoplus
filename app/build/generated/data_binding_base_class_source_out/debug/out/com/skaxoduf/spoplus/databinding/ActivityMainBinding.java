@@ -4,16 +4,17 @@ package com.skaxoduf.spoplus.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.navigation.NavigationView;
 import com.skaxoduf.spoplus.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -21,7 +22,7 @@ import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final DrawerLayout rootView;
 
   @NonNull
   public final MaterialButton btnConnect;
@@ -33,22 +34,19 @@ public final class ActivityMainBinding implements ViewBinding {
   public final MaterialButton btnDateTo;
 
   @NonNull
-  public final CardView cardConfig;
+  public final ImageButton btnMenu;
 
   @NonNull
-  public final TextInputEditText etDatabase;
+  public final CardView cardFilter;
 
   @NonNull
-  public final TextInputEditText etPassword;
-
-  @NonNull
-  public final TextInputEditText etServer;
-
-  @NonNull
-  public final TextInputEditText etUser;
+  public final DrawerLayout drawerLayout;
 
   @NonNull
   public final View headerBg;
+
+  @NonNull
+  public final NavigationView navView;
 
   @NonNull
   public final RecyclerView recyclerView;
@@ -59,23 +57,21 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView tvStatus;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull MaterialButton btnConnect, @NonNull MaterialButton btnDateFrom,
-      @NonNull MaterialButton btnDateTo, @NonNull CardView cardConfig,
-      @NonNull TextInputEditText etDatabase, @NonNull TextInputEditText etPassword,
-      @NonNull TextInputEditText etServer, @NonNull TextInputEditText etUser,
-      @NonNull View headerBg, @NonNull RecyclerView recyclerView, @NonNull TextView tvAppTitle,
+  private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull MaterialButton btnConnect,
+      @NonNull MaterialButton btnDateFrom, @NonNull MaterialButton btnDateTo,
+      @NonNull ImageButton btnMenu, @NonNull CardView cardFilter,
+      @NonNull DrawerLayout drawerLayout, @NonNull View headerBg, @NonNull NavigationView navView,
+      @NonNull RecyclerView recyclerView, @NonNull TextView tvAppTitle,
       @NonNull TextView tvStatus) {
     this.rootView = rootView;
     this.btnConnect = btnConnect;
     this.btnDateFrom = btnDateFrom;
     this.btnDateTo = btnDateTo;
-    this.cardConfig = cardConfig;
-    this.etDatabase = etDatabase;
-    this.etPassword = etPassword;
-    this.etServer = etServer;
-    this.etUser = etUser;
+    this.btnMenu = btnMenu;
+    this.cardFilter = cardFilter;
+    this.drawerLayout = drawerLayout;
     this.headerBg = headerBg;
+    this.navView = navView;
     this.recyclerView = recyclerView;
     this.tvAppTitle = tvAppTitle;
     this.tvStatus = tvStatus;
@@ -83,7 +79,7 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public DrawerLayout getRoot() {
     return rootView;
   }
 
@@ -126,39 +122,29 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.cardConfig;
-      CardView cardConfig = ViewBindings.findChildViewById(rootView, id);
-      if (cardConfig == null) {
+      id = R.id.btnMenu;
+      ImageButton btnMenu = ViewBindings.findChildViewById(rootView, id);
+      if (btnMenu == null) {
         break missingId;
       }
 
-      id = R.id.etDatabase;
-      TextInputEditText etDatabase = ViewBindings.findChildViewById(rootView, id);
-      if (etDatabase == null) {
+      id = R.id.cardFilter;
+      CardView cardFilter = ViewBindings.findChildViewById(rootView, id);
+      if (cardFilter == null) {
         break missingId;
       }
 
-      id = R.id.etPassword;
-      TextInputEditText etPassword = ViewBindings.findChildViewById(rootView, id);
-      if (etPassword == null) {
-        break missingId;
-      }
-
-      id = R.id.etServer;
-      TextInputEditText etServer = ViewBindings.findChildViewById(rootView, id);
-      if (etServer == null) {
-        break missingId;
-      }
-
-      id = R.id.etUser;
-      TextInputEditText etUser = ViewBindings.findChildViewById(rootView, id);
-      if (etUser == null) {
-        break missingId;
-      }
+      DrawerLayout drawerLayout = (DrawerLayout) rootView;
 
       id = R.id.headerBg;
       View headerBg = ViewBindings.findChildViewById(rootView, id);
       if (headerBg == null) {
+        break missingId;
+      }
+
+      id = R.id.navView;
+      NavigationView navView = ViewBindings.findChildViewById(rootView, id);
+      if (navView == null) {
         break missingId;
       }
 
@@ -180,9 +166,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, btnConnect, btnDateFrom,
-          btnDateTo, cardConfig, etDatabase, etPassword, etServer, etUser, headerBg, recyclerView,
-          tvAppTitle, tvStatus);
+      return new ActivityMainBinding((DrawerLayout) rootView, btnConnect, btnDateFrom, btnDateTo,
+          btnMenu, cardFilter, drawerLayout, headerBg, navView, recyclerView, tvAppTitle, tvStatus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

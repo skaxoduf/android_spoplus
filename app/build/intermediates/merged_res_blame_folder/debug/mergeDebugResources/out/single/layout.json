@@ -1,7 +1,7 @@
 [
     {
-        "merged": "com.skaxoduf.spoplus.app-mergeDebugResources-3:/layout/activity_main.xml",
-        "source": "com.skaxoduf.spoplus.app-main-6:/layout/activity_main.xml"
+        "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-mergeDebugResources-3:\\layout\\nav_header.xml",
+        "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\layout\\nav_header.xml"
     },
     {
         "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-mergeDebugResources-3:\\layout\\item_transaction.xml",
@@ -10,5 +10,17 @@
     {
         "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-mergeDebugResources-3:\\layout\\activity_main.xml",
         "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-mergeDebugResources-3:\\layout\\activity_settings.xml",
+        "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\layout\\activity_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-mergeDebugResources-3:\\layout\\activity_home.xml",
+        "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "com.skaxoduf.spoplus.app-mergeDebugResources-3:/layout/item_transaction.xml",
+        "source": "com.skaxoduf.spoplus.app-main-6:/layout/item_transaction.xml"
     }
 ]

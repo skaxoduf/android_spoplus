@@ -4,34 +4,63 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="8dp"
-    android:layout_marginVertical="4dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="3dp"
-    app:cardBackgroundColor="#FFFFFF">
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/surface_card">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/tvTransactionTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="[000] TRS-NO"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#333333"
-            android:layout_marginBottom="4dp"/>
+        <!-- Icon Placeholder -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/ic_transaction_placeholder"
+            android:backgroundTint="@color/primary_light"
+            android:layout_marginEnd="16dp"/>
+            <!-- Ideally this would be an ImageView with a proper icon drawable -->
 
-        <TextView
-            android:id="@+id/tvTransactionDetails"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:text="YYYY-MM-DD ~ YYYY-MM-DD"
-            android:textColor="#666666" />
-            
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTransactionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="[000] TRS-NO"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:layout_marginBottom="2dp"/>
+                
+            <TextView
+                android:id="@+id/tvTransactionSukangban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="수강종목명"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/interactive_color"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/tvTransactionDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="YYYY-MM-DD ~ YYYY-MM-DD"
+                android:textColor="@color/text_secondary" />
+        </LinearLayout>
+        
+        <!-- Arrow or Action Icon could go here -->
+        
     </LinearLayout>
 </androidx.cardview.widget.CardView>

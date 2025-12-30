@@ -12,6 +12,7 @@ class TransactionAdapter(private val items: List<TransactionItem>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvTitle: TextView = view.findViewById(R.id.tvTransactionTitle)
         val tvDetails: TextView = view.findViewById(R.id.tvTransactionDetails)
+        val tvSukangban: TextView = view.findViewById(R.id.tvTransactionSukangban)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,6 +25,7 @@ class TransactionAdapter(private val items: List<TransactionItem>) :
         val item = items[position]
         holder.tvTitle.text = item.id
         holder.tvDetails.text = item.details
+        holder.tvSukangban.text = item.sukangban
     }
 
     override fun getItemCount() = items.size

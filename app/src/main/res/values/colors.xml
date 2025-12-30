@@ -7,4 +7,17 @@
     <color name="teal_700">#018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- New Design Colors -->
+    <color name="primary_dark">#1A237E</color>
+    <color name="primary_light">#534BAE</color>
+    <color name="background_light">#F5F6FA</color>
+    <color name="surface_card">#FFFFFF</color>
+    <color name="accent_teal">#00BFA5</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    
+    <!-- Semantic Colors -->
+    <color name="text_header">@color/primary_dark</color>
+    <color name="interactive_color">@color/primary_dark</color>
 </resources>

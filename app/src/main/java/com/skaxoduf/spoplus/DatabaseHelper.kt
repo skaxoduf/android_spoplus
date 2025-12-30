@@ -8,12 +8,13 @@ import java.sql.Statement
 
 data class TransactionItem(
     val id: String,
-    val details: String
+    val details: String,
+    val sukangban: String
 )
 
 class DatabaseHelper {
 
-    fun connectAndQuery(config: DbConfig, dateFrom: String, dateTo: String): List<TransactionItem> {
+    fun connectAndQuery(config: DbConfig, dateFrom: String, dateTo: String, page: Int = 1, pageSize: Int = 10): List<TransactionItem> {
         // [SAFETY] Forcefully allow network on main thread just in case, to prevent "Keeps Stopping"
         val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
         StrictMode.setThreadPolicy(policy)
@@ -33,13 +34,22 @@ class DatabaseHelper {
             connection = DriverManager.getConnection(connectionUrl)
             
             if (connection != null) {
-                // Assuming trsdate is convertible to string or is a string 'YYYYMMDD' or 'YYYY-MM-DD'
-                // We'll use simple string comparison which works for ISO formats and YYYYMMDD
-                val query = "SELECT uid, trsno, startdate, enddate FROM t_trsinout WHERE trsdate BETWEEN ? AND ?" 
+                // Pagination Logic: OFFSET (page-1)*pageSize ROWS FETCH NEXT pageSize ROWS ONLY
+                // Requires SQL Server 2012+
+                val offset = (page - 1) * pageSize
+                val query = """
+                    SELECT uid, trsno, startdate, enddate, sukangban 
+                    FROM t_trsinout 
+                    WHERE trsdate BETWEEN ? AND ?
+                    ORDER BY uid DESC
+                    OFFSET ? ROWS FETCH NEXT ? ROWS ONLY
+                """.trimIndent()
                 
                 val stmt = connection.prepareStatement(query)
                 stmt.setString(1, dateFrom)
                 stmt.setString(2, dateTo)
+                stmt.setInt(3, offset)
+                stmt.setInt(4, pageSize)
                 
                 val rs = stmt.executeQuery()
                 
@@ -48,16 +58,17 @@ class DatabaseHelper {
                     val trsno = rs.getString("trsno") ?: "-"
                     val start = rs.getString("startdate") ?: ""
                     val end = rs.getString("enddate") ?: ""
+                    val sukang = rs.getString("sukangban") ?: ""
                     
                     // Display format: 
                     // Title: [UID] TRS-NO
                     // Details: 20240101 ~ 20240131
-                    items.add(TransactionItem("[$uid] $trsno", "$start ~ $end"))
+                    items.add(TransactionItem("[$uid] $trsno", "$start ~ $end", sukang))
                 }
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            items.add(TransactionItem("Error", "${e.javaClass.simpleName}: ${e.message}"))
+            items.add(TransactionItem("Error", "${e.javaClass.simpleName}: ${e.message}", ""))
         } finally {
             try { connection?.close() } catch (e: Exception) {}
         }

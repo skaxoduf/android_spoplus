@@ -4,19 +4,43 @@
         "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\xml\\backup_rules.xml"
     },
     {
+        "merged": "com.skaxoduf.spoplus.app-debug-4:/layout_item_transaction.xml.flat",
+        "source": "com.skaxoduf.spoplus.app-main-6:/layout/item_transaction.xml"
+    },
+    {
+        "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-debug-4:\\layout_activity_settings.xml.flat",
+        "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\layout\\activity_settings.xml"
+    },
+    {
         "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-debug-4:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-debug-4:\\menu_drawer_menu.xml.flat",
+        "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\menu\\drawer_menu.xml"
     },
     {
         "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-debug-4:\\layout_item_transaction.xml.flat",
         "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\layout\\item_transaction.xml"
     },
     {
+        "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-debug-4:\\drawable_menu_hero_image.png.flat",
+        "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\drawable\\menu_hero_image.png"
+    },
+    {
+        "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-debug-4:\\layout_nav_header.xml.flat",
+        "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\layout\\nav_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-debug-4:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\layout\\activity_home.xml"
+    },
+    {
         "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-debug-4:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.skaxoduf.spoplus.app-debug-4:/layout_activity_main.xml.flat",
-        "source": "com.skaxoduf.spoplus.app-main-6:/layout/activity_main.xml"
+        "merged": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-debug-4:\\drawable_ic_transaction_placeholder.xml.flat",
+        "source": "C:\\Users\\skaxo\\.gradle\\daemon\\9.0-milestone-1\\com.skaxoduf.spoplus.app-main-6:\\drawable\\ic_transaction_placeholder.xml"
     }
 ]

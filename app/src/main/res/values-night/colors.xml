@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Dark Mode Design Colors -->
+    <!-- Primary Dark stays dark for header, but maybe slightly lighter for visibility? 
+         Actually, let's keep headers dark indigo, but background needs to be dark grey. -->
+    <color name="primary_dark">#121212</color> <!-- Almost black for headers in dark mode or keep branding? Let's use dark surface -->
+    <color name="primary_light">#7986CB</color> <!-- Lighter accent -->
+    
+    <!-- Backgrounds -->
+    <color name="background_light">#121212</color> <!-- Dark background for the screen -->
+    <color name="surface_card">#1E1E1E</color> <!-- Slightly lighter dark for cards -->
+    
+    <color name="accent_teal">#64FFDA</color>
+    
+    <!-- Text Colors (INVERTED) -->
+    <color name="text_primary">#FFFFFF</color> <!-- White text -->
+    <color name="text_secondary">#B0BEC5</color> <!-- Light grey text -->
+    
+    <!-- Semantic Colors -->
+    <color name="text_header">#FFFFFF</color>
+    <color name="interactive_color">#FFFFFF</color>
+</resources>

@@ -18,6 +18,7 @@
     <uses-permission android:name="com.skaxoduf.spoplus.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
+        android:name="com.skaxoduf.spoplus.MyApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -29,7 +30,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.SpoPlus" >
         <activity
-            android:name="com.skaxoduf.spoplus.MainActivity"
+            android:name="com.skaxoduf.spoplus.HomeActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,6 +38,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.skaxoduf.spoplus.SettingsActivity" />
+        <activity
+            android:name="com.skaxoduf.spoplus.MainActivity"
+            android:exported="false" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
